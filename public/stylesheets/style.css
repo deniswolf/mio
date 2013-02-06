@@ -22,7 +22,7 @@ a {
 	font-size:16px;
 	margin:0;
 	padding:0;
-	line-height: 30px;
+	line-height: 60px;
 }
 #badge .profile {
 	background: #333;
@@ -36,6 +36,7 @@ a {
 #badge .photo {
 	margin-top:20px;
 	display: inline-block;
+	vertical-align: top;
 	background: #fafafa;
 	width:160px;
 	height:160px;
@@ -60,7 +61,7 @@ a {
 	line-height: 100px;
 	text-align:left;
 	text-indent: -600px;
-	
+
 	font-weight: bold;
 	color:#000;
 	overflow: hidden;

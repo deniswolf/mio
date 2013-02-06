@@ -1,8 +1,47 @@
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background:url('/images/bright_squares.png') 0 0 repeat;
 }
 
 a {
     color: #00B7FF;
+}
+#badge {
+	margin:0 auto;
+	width:20em;
+	background:#fff;
+	padding:2em;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+#badge h2 {
+	text-align: center;
+}
+#badge .photo {
+	display: none;
+	background: #fafafa;
+	width:128px;
+	height:128px;
+	border:1px solid #ccc;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.2), inset 0 1px 1px rgba(0,0,0,0.2);
+	overflow: hidden;
+	margin:1em auto;
+	/*border-radius: 64px;*/
+}
+#badge .status {
+	cursor: pointer;
+	background:#009900;
+	width:256px;
+	height:256px;
+	line-height: 256px;
+	text-align:center;
+	font-size:48px;
+	font-weight: bold;
+	color:#fff;
+	border:10px solid #00dd00;
+	text-shadow:0 -1px 0 #000;
+	box-shadow: 0 1px 20px rgba(0,0,0,0.2), inset 0 1px 1px rgba(0,0,0,0.2);
+	overflow: hidden;
+	margin:1em auto;
+	border-radius: 135px;
 }

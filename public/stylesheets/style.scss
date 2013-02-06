@@ -1,0 +1,87 @@
+$grid_h:20px;
+$grid_w:60px;
+$grid_m:20px;
+$badge_c:8;
+@import "mixins.scss";
+body {
+    padding: 50px;
+    font: 14px "ff-enzo-web","Lucida Grande", Helvetica, Arial, sans-serif;
+    background:url('/images/bright_squares.png') 0 0 repeat;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+a {
+    color: #00B7FF;
+}
+#badge {
+	margin:0 auto;
+	@include g_w($badge_c);	
+	background:#fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	h2 {
+		text-align: center;
+		font-weight: 200;
+		font-size:16px;
+		margin:0;
+		padding:0;
+		line-height: 3 * $grid_h;
+	}
+	.profile {
+		background: #333;
+		@include g_w(3);
+		@include g_h(3);
+		@include inline_block;
+		vertical-align: top;
+		text-align: center;
+		color:#fff;
+	}
+	.photo {
+		margin-top:$grid_h;
+		display: inline-block;
+		vertical-align: top;
+		background: #fafafa;
+		@include g_w(2);
+		@include g_h(2);
+		border:1px solid #ccc;
+		box-shadow: 0 1px 1px rgba(0,0,0,0.2), inset 0 1px 1px rgba(0,0,0,0.2);
+		overflow: hidden;
+	}
+	.status {
+		vertical-align: top;
+		display: inline-block;
+		@include g_w($badge_c - 3);
+		@include g_h(3);
+		text-align: center;
+	}
+	.status .icon {
+		display: inline-block;
+		margin-top:$grid_h / 2;
+		margin-bottom:$grid_h / 2;
+		cursor: pointer;
+		@include g_w(2);
+		@include g_h(2);
+		background:url('../images/temp_ok_icon.png') center center no-repeat;
+		background-size:100%;
+		text-align:left;
+		text-indent: -600px;
+		font-weight: bold;
+		color:#000;
+		overflow: hidden;
+		
+	}
+	.status .time {
+		display: inline-block;
+		width:100%;
+		cursor: pointer;
+		height:60px;
+		line-height: 60px;
+		text-align:center;
+		font-weight: bold;
+		color:#fff;
+		background: #0a6903;
+		overflow: hidden;
+		
+	}
+}

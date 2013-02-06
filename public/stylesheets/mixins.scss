@@ -1,0 +1,16 @@
+@mixin inline_block {
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+}
+@mixin border_radius ($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin g_w($num) {
+	width:$grid_w * $num + $grid_m * ($num);
+}
+@mixin g_h($num) {
+	height:$grid_w * $num + $grid_m * ($num);
+}

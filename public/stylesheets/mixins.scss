@@ -14,3 +14,9 @@
 @mixin g_h($num) {
 	height:$grid_w * $num + $grid_m * ($num);
 }
+@mixin g_m_top($num) {
+	margin-top: - ($grid_w * $num + $grid_m * ($num)) / 2;
+}
+@mixin g_m_left($num) {
+	margin-left: - ($grid_w * $num + $grid_m * ($num)) / 2;
+}

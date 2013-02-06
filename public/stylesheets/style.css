@@ -1,7 +1,9 @@
+
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background:url('/images/bright_squares.png') 0 0 repeat;
+    line-height: 20px;
 }
 
 a {
@@ -9,39 +11,71 @@ a {
 }
 #badge {
 	margin:0 auto;
-	width:20em;
+	width:460px;
 	background:#fff;
-	padding:2em;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 #badge h2 {
 	text-align: center;
+	font-weight: 200;
+	line-height: 20px;
+	font-size:16px;
+	margin:0;
+	padding:0;
+	line-height: 30px;
+}
+#badge .profile {
+	background: #333;
+	width:240px;
+	height:240px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	color:#fff;
 }
 #badge .photo {
-	display: none;
+	margin-top:20px;
+	display: inline-block;
 	background: #fafafa;
-	width:128px;
-	height:128px;
+	width:160px;
+	height:160px;
 	border:1px solid #ccc;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.2), inset 0 1px 1px rgba(0,0,0,0.2);
 	overflow: hidden;
-	margin:1em auto;
 	/*border-radius: 64px;*/
 }
 #badge .status {
+	vertical-align: top;
+	display: inline-block;
+	width:220px;
+	height:160px;
+	text-align: center;
+}
+#badge .status .icon {
+	display: inline-block;
+	width:220px;
 	cursor: pointer;
-	background:#009900;
-	width:256px;
-	height:256px;
-	line-height: 256px;
+	height:180px;
+	background:url('../images/temp_ok_icon.png') center center no-repeat;
+	line-height: 100px;
+	text-align:left;
+	text-indent: -600px;
+	
+	font-weight: bold;
+	color:#000;
+	overflow: hidden;
+	
+}
+#badge .status .time {
+	display: inline-block;
+	width:220px;
+	cursor: pointer;
+	height:60px;
+	line-height: 60px;
 	text-align:center;
-	font-size:48px;
 	font-weight: bold;
 	color:#fff;
-	border:10px solid #00dd00;
-	text-shadow:0 -1px 0 #000;
-	box-shadow: 0 1px 20px rgba(0,0,0,0.2), inset 0 1px 1px rgba(0,0,0,0.2);
+	background: #0a6903;
 	overflow: hidden;
-	margin:1em auto;
-	border-radius: 135px;
+	
 }

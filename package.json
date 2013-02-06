@@ -1,5 +1,6 @@
 {
-  "name": "application-name",
+  "name": "mio",
+  "description":"back-end for MomIamOkay",
   "version": "0.0.1",
   "private": true,
   "scripts": {

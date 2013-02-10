@@ -5,8 +5,8 @@
     window.auth = {};
     window.auth.fb = {};
     window.auth.fb.status = function(){
-        if (location.hash === '#fb_login_failed') return 'failed';
-        if (location.hash === '') return 'unknown';
+        if (location.hash === '#fb_login_failed') { return 'failed'; }
+        if (location.hash === '') { return 'unknown'; }
     };
 
     //  PRETTY PRINT

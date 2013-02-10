@@ -24,6 +24,12 @@
         console.log.call(console, message);
     };
 
+    window.c.error = function errorLog(){
+        var passedMessage = Array.prototype.slice.call(arguments).join(' , '),
+            message = 'ERROR: '+moment().format('H:mm:ss') + ': '+passedMessage;
+        console.log.call(console, message);
+    };
+
     $('document').ready(function(){
     });
 })(jQuery);

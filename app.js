@@ -36,6 +36,11 @@ app.get('/users', user.list);
 
 // setup FACEBOOK authentication
 var passport = passportFacebook(config.auth.FACEBOOK, function authCallback(){});
+app.get('/auth/facebook', passport.authenticate('facebook'));
+app.get('/auth/facebook/callback',
+    passport.authenticate('facebook', { successRedirect: '/',
+        failureRedirect: '/#fb_login_failed' }));
+
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log("Express server listening on port " + app.get('port'));

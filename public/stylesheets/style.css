@@ -25,7 +25,7 @@ a {
     padding: 0;
     line-height: 60px; }
   #badge .profile {
-    background: #333;
+    background: #00aeef;
     width: 240px;
     height: 240px;
     display: inline-block;
@@ -41,15 +41,15 @@ a {
     background: #fafafa;
     width: 160px;
     height: 160px;
-    border: 1px solid #cccccc;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid white;
     overflow: hidden; }
   #badge .status {
     vertical-align: top;
     display: inline-block;
     width: 400px;
     height: 240px;
-    text-align: center; }
+    text-align: center;
+    background: #eceff1; }
   #badge .status .icon {
     display: inline-block;
     margin-top: 10px;
@@ -73,6 +73,5 @@ a {
     text-align: center;
     font-weight: bold;
     color: #fff;
-    background: #0a6903;
-    background: #666;
+    background: #71aa00;
     overflow: hidden; }

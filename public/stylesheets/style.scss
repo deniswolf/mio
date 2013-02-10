@@ -33,7 +33,7 @@ a {
 		line-height: 3 * $grid_h;
 	}
 	.profile {
-		background: #333;
+		background: #00aeef;
 		@include g_w(3);
 		@include g_h(3);
 		@include inline_block;
@@ -48,8 +48,7 @@ a {
 		background: #fafafa;
 		@include g_w(2);
 		@include g_h(2);
-		border:1px solid #ccc;
-		box-shadow: 0 1px 1px rgba(0,0,0,0.2), inset 0 1px 1px rgba(0,0,0,0.2);
+		border:1px solid #fff;
 		overflow: hidden;
 	}
 	.status {
@@ -58,6 +57,7 @@ a {
 		@include g_w($badge_c - 3);
 		@include g_h(3);
 		text-align: center;
+		background:#eceff1;
 	}
 	.status .icon {
 		display: inline-block;
@@ -84,8 +84,8 @@ a {
 		text-align:center;
 		font-weight: bold;
 		color:#fff;
-		background: #0a6903;
-		background:#666;
+		background: #71aa00;
+		//background:#666;
 		overflow: hidden;
 		
 	}

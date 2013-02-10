@@ -8,7 +8,9 @@
 
         // show state of loaded components
         window.c.loaded = function logToConsole(){
-            console.log.apply(console, Array.prototype.slice.call(arguments));
+            var passedMessage = Array.prototype.slice.call(arguments).join(' , '),
+                message = "LOADED: "+moment().format('H:mm:ss') + ': '+passedMessage;
+            console.log.call(console, message);
         };
 
         // print detailed info on arguments
@@ -18,7 +20,9 @@
 
         // we all love old console.log
         window.c.log = function consoleLog(){
-            console.log.apply(console, arguments);
+            var passedMessage = Array.prototype.slice.call(arguments).join(' , '),
+                message = moment().format('H:mm:ss') + ': '+passedMessage;
+            console.log.call(console, message);
         };
 
 

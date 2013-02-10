@@ -35,11 +35,20 @@ app.get('/users', user.list);
 
 
 // setup FACEBOOK authentication
-var passport = passportFacebook(config.auth.FACEBOOK, function authCallback(){});
-app.get('/auth/facebook', passport.authenticate('facebook'));
+var FACEBOOK = config.auth.FACEBOOK;
+var passport = passportFacebook(FACEBOOK, function authCallback(accessToken, refreshToken, profile, done) {
+    console.log('MIO: LOG: inside FB callback with tokens etc');
+    done();
+});
+app.get('/auth/facebook', passport.authenticate('facebook', {scope: FACEBOOK.PERMISSIONS}));
 app.get('/auth/facebook/callback',
-    passport.authenticate('facebook', { successRedirect: '/',
-        failureRedirect: '/#fb_login_failed' }));
+    passport.authenticate('facebook',
+        {
+            failureRedirect: '/#fb_login_failed',
+            successRedirect: '/'
+        }
+    )
+);
 
 
 http.createServer(app).listen(app.get('port'), function () {

@@ -7,7 +7,8 @@ var express = require('express')
     , user = require('./routes/user')
     , http = require('http')
     , path = require('path')
-    , config = require('./.config.json');
+    , config = require('./.config.json')
+    , passportFacebook = require('./fb');
 
 var app = express();
 
@@ -31,6 +32,10 @@ app.configure('development', function () {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+
+
+// setup FACEBOOK authentication
+var passport = passportFacebook(config.auth.FACEBOOK, function authCallback(){});
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log("Express server listening on port " + app.get('port'));

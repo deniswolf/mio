@@ -1,6 +1,14 @@
 (function($){
     // javascript for all pages
 
+    // AUTH events
+    window.auth = {};
+    window.auth.fb = {};
+    window.auth.fb.status = function(){
+        if (location.hash === '#fb_login_failed') return 'failed';
+        if (location.hash === '') return 'unknown';
+    };
+
     //  PRETTY PRINT
     //  logging functions wrapped for use in dev mode only
     window.c = {};

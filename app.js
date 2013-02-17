@@ -38,7 +38,7 @@ app.get('/users', user.list);
 var FACEBOOK = config.auth.FACEBOOK;
 var passport = passportFacebook(FACEBOOK, function authCallback(accessToken, refreshToken, profile, done) {
     console.log('MIO: LOG: inside FB callback with tokens etc');
-    done();
+    done(null, profile);
 });
 app.get('/auth/facebook', passport.authenticate('facebook', {scope: FACEBOOK.PERMISSIONS}));
 app.get('/auth/facebook/callback',

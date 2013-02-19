@@ -3,6 +3,18 @@
 	*display:inline;
 	zoom:1;
 }
+@mixin prefixer ($property, $value,
+                 $webkit: true,
+                    $moz: true,
+                     $ms: true,
+                      $o: true,
+                   $spec: true) {
+  @if $webkit { -webkit-#{$property}: $value; }
+  @if $moz    {    -moz-#{$property}: $value; }
+  @if $ms     {     -ms-#{$property}: $value; }
+  @if $o      {      -o-#{$property}: $value; }
+  @if $spec   {         #{$property}: $value; }
+}
 @mixin border_radius ($radius) {
     -moz-border-radius: $radius;
     -webkit-border-radius: $radius;
@@ -19,4 +31,10 @@
 }
 @mixin g_m_left($num) {
 	margin-left: - ($grid_w * $num + $grid_m * ($num)) / 2;
+}
+@mixin round ($d) {
+	width:$d;
+	height:$d;
+	@include border_radius(($d/2));
+	overflow:hidden;
 }

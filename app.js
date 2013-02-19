@@ -12,6 +12,21 @@ var express = require('express')
 
 var app = express();
 
+var FACEBOOK = config.auth.FACEBOOK;
+var passport = passportFacebook(FACEBOOK, function authCallback(accessToken, refreshToken, profile, done) {
+    console.log('MIO: LOG: inside FB callback with tokens etc');
+    done(null, profile);
+});
+
+// TODO: something with user
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});
+passport.deserializeUser(function(obj, done) {
+    done(null, obj);
+});
+
+
 app.configure(function () {
     app.set('port', process.env.PORT || 3000);
     app.set('views', __dirname + '/views');
@@ -22,6 +37,8 @@ app.configure(function () {
     app.use(express.methodOverride());
     app.use(express.cookieParser('your secret here'));
     app.use(express.session());
+    app.use(passport.initialize());
+    app.use(passport.session());
     app.use(app.router);
     app.use(express.static(path.join(__dirname, 'public')));
 });
@@ -35,11 +52,6 @@ app.get('/users', user.list);
 
 
 // setup FACEBOOK authentication
-var FACEBOOK = config.auth.FACEBOOK;
-var passport = passportFacebook(FACEBOOK, function authCallback(accessToken, refreshToken, profile, done) {
-    console.log('MIO: LOG: inside FB callback with tokens etc');
-    done();
-});
 app.get('/auth/facebook', passport.authenticate('facebook', {scope: FACEBOOK.PERMISSIONS}));
 app.get('/auth/facebook/callback',
     passport.authenticate('facebook',

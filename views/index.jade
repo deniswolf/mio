@@ -2,13 +2,18 @@ extends layout
 
 block content
     h1= title
+    #tutorial
+
+    #user
+      |USER
     #button
       .button_content
         .inside
-          .name Person name
-          .time 21:30
+          .name I'm Ok<br/>last update hour ago
+          
       .button_content_hover
         .inside
           .photo(style="background:url('http://sphotos-e.ak.fbcdn.net/hphotos-ak-prn1/40458_144434228922620_1237840_n.jpg') center center no-repeat;")
+          .time 21:30
 block js
     script(src='/javascripts/index.js')

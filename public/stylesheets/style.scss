@@ -8,7 +8,7 @@ $badge_c:8;
 	.inside {
 		@include inline_block;
 		vertical-align:middle;
-		line-height:100%;
+		line-height:180%;
 		width:100%;
 	}
 	border:1px solid transparent;
@@ -26,12 +26,33 @@ $badge_c:8;
 body {
     
     font: 14px "ff-enzo-web","Lucida Grande", Helvetica, Arial, sans-serif;
-    background:url('/images/bright_squares.png') 0 0 repeat;
+    background:#fec451;
     line-height: 20px;
     font-weight: 300;
     letter-spacing: 1px;
 }
-
+#user {
+	position:absolute;
+	top:1em;
+	right:1em;
+	background:#eb5252;
+	padding:0.5em;
+}
+#tutorial {
+	display:none;
+	background:#dcecf5;
+	padding:1em;
+	width:40em;
+	margin:2em auto;
+	border:1px solid transparent;
+	@include border_radius(10px);
+	overflow:hidden;
+	@include prefixer(transition, height .4s ease-in-out);	
+	span {
+		@include prefixer(transition, all .4s ease-in-out);	
+		opacity:0;
+	}
+}
 a {
     color: #00B7FF;
 }
@@ -42,18 +63,27 @@ h1 {
 	@include round(300px);
 	line-height:300px;
 	@include border_radius(190px);
-	border:20px solid rgba(0,180,0,1);
-	background:rgba(255,255,255,0.8);
+	border:20px solid #dcecf5;
+	background:#eb5252;
+	color:#fff;
 	position:relative;
 	margin:0 auto;
+	position:absolute;
+	top:50%;
+	margin-top:-160px;
+	left:50%;
+	margin-left:-160px;
 	@include prefixer(perspective,500px);
+	box-shadow:0 20px 30px rgba(120,40,40,0.7),inset 0 10px 10px rgba(120,40,40,0.7);
 	overflow:hidden;
+	cursor:pointer;
 	.button_content {
 		@include coin;
 		@include prefixer(transform, rotateY(0deg));
 		@include prefixer(transform-style, preserve-3d);
 		@include prefixer(backface-visibility, hidden);
 		@include prefixer(transition, all .4s ease-in-out);
+
 	}
 	.button_content_hover {
 		@include coin;
@@ -98,6 +128,7 @@ h1 {
 		width:100%;
 		padding:5px;
 		background:rgba(0,0,0,0.5);
+		color:#fff;
 	}
 }
 #badge {

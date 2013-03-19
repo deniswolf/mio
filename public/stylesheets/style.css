@@ -1,9 +1,40 @@
 body {
   font: 14px "ff-enzo-web", "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: url("/images/bright_squares.png") 0 0 repeat;
+  background: #fec451;
   line-height: 20px;
   font-weight: 300;
   letter-spacing: 1px; }
+
+#user {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background: #eb5252;
+  padding: 0.5em; }
+
+#tutorial {
+  display: none;
+  background: #dcecf5;
+  padding: 1em;
+  width: 40em;
+  margin: 2em auto;
+  border: 1px solid transparent;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-transition: height 0.4s ease-in-out;
+  -moz-transition: height 0.4s ease-in-out;
+  -ms-transition: height 0.4s ease-in-out;
+  -o-transition: height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out; }
+  #tutorial span {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    opacity: 0; }
 
 a {
   color: #00B7FF; }
@@ -22,16 +53,24 @@ h1 {
   -moz-border-radius: 190px;
   -webkit-border-radius: 190px;
   border-radius: 190px;
-  border: 20px solid #00b400;
-  background: rgba(255, 255, 255, 0.8);
+  border: 20px solid #dcecf5;
+  background: #eb5252;
+  color: #fff;
   position: relative;
   margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  margin-top: -160px;
+  left: 50%;
+  margin-left: -160px;
   -webkit-perspective: 500px;
   -moz-perspective: 500px;
   -ms-perspective: 500px;
   -o-perspective: 500px;
   perspective: 500px;
-  overflow: hidden; }
+  box-shadow: 0 20px 30px rgba(120, 40, 40, 0.7), inset 0 10px 10px rgba(120, 40, 40, 0.7);
+  overflow: hidden;
+  cursor: pointer; }
   #button .button_content {
     -moz-border-radius: 190px;
     -webkit-border-radius: 190px;
@@ -72,7 +111,7 @@ h1 {
       *display: inline;
       zoom: 1;
       vertical-align: middle;
-      line-height: 100%;
+      line-height: 180%;
       width: 100%; }
   #button .button_content_hover {
     -moz-border-radius: 190px;
@@ -115,7 +154,7 @@ h1 {
       *display: inline;
       zoom: 1;
       vertical-align: middle;
-      line-height: 100%;
+      line-height: 180%;
       width: 100%; }
     #button .button_content_hover .inside {
       width: 100%;
@@ -145,7 +184,8 @@ h1 {
     bottom: 0;
     width: 100%;
     padding: 5px;
-    background: rgba(0, 0, 0, 0.5); }
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff; }
 
 #badge {
   position: absolute;
